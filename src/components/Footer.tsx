@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone } from "lucide-react";
+import LogoImg from "@/assets/logo.jpg";
 
 export function Footer() {
   return (
@@ -7,8 +8,10 @@ export function Footer() {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12">
         <div>
           <div className="text-xl font-display font-extrabold tracking-tighter flex items-center gap-2.5 mb-4">
-            <div className="size-8 bg-brand-primary rounded-lg flex items-center justify-center text-white text-sm">M</div>
-            MOREDEV
+           <Link to="/" className="text-xl font-display font-extrabold tracking-tighter flex items-center gap-2.5">
+           <img src={LogoImg} alt="Logo" loading="lazy" width={80} height={80} style={{ borderRadius: "5%" }} className=" object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span className="text-brand-text">M O R E D E V</span>
+        </Link>
           </div>
           <p className="text-brand-muted text-sm leading-relaxed max-w-xs">
             Partenaire digital en Côte d'Ivoire : conception web, design graphique et accessoires informatiques haute performance.

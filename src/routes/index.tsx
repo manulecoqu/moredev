@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import heroImg from "@/assets/hero-server.jpg";
-import keyboardImg from "@/assets/product-keyboard.jpg";
-import mouseImg from "@/assets/product-mouse.jpg";
-import captureImg from "@/assets/product-capture.jpg";
+import keyboardImg from "@/assets/product-keyboard.png";
+import mouseImg from "@/assets/product-mouse.png";
+import captureImg from "@/assets/product-capture.png";
 import { Code2, PenTool, Printer, CreditCard, Shield, Zap, HeartHandshake, Truck } from "lucide-react";
 
 export const Route = createFileRoute("/")({

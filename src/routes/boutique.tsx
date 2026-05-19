@@ -1,11 +1,19 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import keyboardImg from "@/assets/product-keyboard.jpg";
-import mouseImg from "@/assets/product-mouse.jpg";
-import captureImg from "@/assets/product-capture.jpg";
-import usbImg from "@/assets/product-usb.jpg";
-import cablesImg from "@/assets/product-cables.jpg";
+import keyboardImg from "@/assets/product-keyboard.png";
+import keyboardImgMecanique from "@/assets/product-keyboard-mecanique.png";
+import mouseImg from "@/assets/product-mouse.png";
+import captureImg from "@/assets/product-capture.png";
+import usbImg from "@/assets/product-usb.png";
+import cablesImgPortable from "@/assets/product-cables-portable.png";
+import ChargeurDell from "@/assets/ChargeurDell.png";
+import Adaptateur from "@/assets/Adaptateur.png";
+import NetflixAffiche from "@/assets/NetflixAffiche.png";
+import ChargeurHp from "@/assets/ChargeurHp.png";
+import ChargeurLenovoTypeC from "@/assets/ChargeurLenovoTypeC.png";
+import ChargeurLenovoBoutCarre from "@/assets/ChargeurLenovoBoutCarre.png";
+import cablesImg from "@/assets/product-cables.jpeg";
 
 export const Route = createFileRoute("/boutique")({
   head: () => ({
@@ -20,12 +28,19 @@ export const Route = createFileRoute("/boutique")({
 });
 
 const products = [
-  { img: keyboardImg, name: "Clavier mécanique Pro", category: "Périphériques", desc: "Switch Blue, rétroéclairage RGB", price: "À partir de 45 000 FCFA" },
-  { img: mouseImg, name: "Souris sans fil ergonomique", category: "Périphériques", desc: "Capteur 16000 DPI, rechargeable", price: "À partir de 18 000 FCFA" },
-  { img: captureImg, name: "Carte de capture vidéo 4K", category: "Streaming", desc: "HDMI Ultra HD, faible latence", price: "À partir de 65 000 FCFA" },
-  { img: usbImg, name: "Clés USB 32 / 64 / 128 Go", category: "Stockage", desc: "USB 3.0, finition métal", price: "À partir de 5 000 FCFA" },
-  { img: cablesImg, name: "Câbles d'alimentation PC", category: "Câblerie", desc: "Pour PC bureau & PC portable", price: "À partir de 3 500 FCFA" },
-  { img: keyboardImg, name: "Pack bureau complet", category: "Pack", desc: "Clavier + souris + clé USB", price: "À partir de 60 000 FCFA" },
+  { img: keyboardImgMecanique, name: "Clavier mécanique Pro", category: "Périphériques", desc: "Switch Blue, rétroéclairage RGB", price: "" },
+  { img: mouseImg, name: "Souris sans fil ergonomique", category: "Périphériques", desc: "Capteur 16000 DPI, rechargeable", price: "" },
+  { img: captureImg, name: "Carte de capture vidéo 4K", category: "Streaming", desc: "HDMI Ultra HD, faible latence", price: "" },
+  { img: usbImg, name: "Clés USB 32 / 64 / 128 Go", category: "Stockage", desc: "USB 3.0, finition métal", price: "" },
+  { img: cablesImg, name: "Câbles d'alimentation PC Bureau", category: "Câblerie", desc: "Pour PC bureau & PC portable", price: "" },
+  { img: cablesImgPortable, name: "Câbles d'alimentation PC Portable", category: "Câblerie", desc: "Pour PC bureau & PC portable", price: "" },
+  { img: keyboardImg, name: "Pack bureau complet", category: "Pack", desc: "Clavier + souris + Casque + Baffles", price: "" },
+  { img: ChargeurDell, name: "Chargeur Dell", category: "Chargeurs Ordinateur", desc: "Chargeur compatible ordinateurs portables Dell, offrant une alimentation stable et sécurisée avec protection contre les surtensions et la surchauffe.", price: "" },
+  { img: Adaptateur, name: "Adaptateur Convertisseur HDMI Femelle vers Mini HDMI Mâle", category: "ADAPTATEURS & CONNECTIQUE", desc: "Permet de connecter un câble HDMI standard à des appareils équipés d’un port Mini HDMI (caméras, tablettes, certains PC). Transmission audio et vidéo en haute définition.", price: "" },
+  { img: NetflixAffiche, name: "Netflix & Prime Video", category: "Streaming", desc: "streaming Netflix et Prime Video, idéale pour décoration, marketing ou support digital.", price: "" },
+  { img: ChargeurHp, name: "Chargeur HP", category: "Chargeurs Ordinateur", desc: "Compatible PC HP, charge rapide et protection contre les surtensions.", price: "" },
+  { img: ChargeurLenovoTypeC, name: "Chargeur Lenovo Type C", category: "Chargeurs Ordinateur", desc: "Chargeur USB-C compatible PC Lenovo, supporte la charge rapide Power Delivery (PD) pour une alimentation stable et efficace", price: "" },
+  { img: ChargeurLenovoBoutCarre, name: "Chargeur Lenovo Bout Carré", category: "Chargeurs Ordinateur", desc: "Compatible PC Lenovo, charge rapide et protection contre les surtensions.", price: "" },
 ];
 
 function BoutiquePage() {
@@ -51,7 +66,8 @@ function BoutiquePage() {
                 <p className="text-brand-muted text-sm mb-4">{p.desc}</p>
                 <div className="flex justify-between items-center pt-4 border-t border-white/5">
                   <span className="text-sm font-medium text-brand-text">{p.price}</span>
-                  <Link to="/contact" className="text-sm text-brand-accent font-semibold hover:underline">Commander →</Link>
+                  {/* <Link to="/contact" className="text-sm text-brand-accent font-semibold hover:underline">Commander →</Link> */}
+                  <a href="https://wa.me/2250767080820"target="_blank" rel="noopener noreferrer" className="text-sm text-brand-accent font-semibold hover:underline">Commander →</a>
                 </div>
               </div>
             </div>

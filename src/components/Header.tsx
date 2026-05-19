@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
+import LogoImg from "@/assets/logo.jpg";
 const links = [
   { to: "/", label: "Accueil" },
   { to: "/services", label: "Services" },
@@ -15,8 +16,8 @@ export function Header() {
     <nav className="sticky top-0 z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/5">
       <div className="flex items-center justify-between px-6 sm:px-8 py-5 max-w-7xl mx-auto">
         <Link to="/" className="text-xl font-display font-extrabold tracking-tighter flex items-center gap-2.5">
-          <div className="size-8 bg-brand-primary rounded-lg flex items-center justify-center text-white text-sm shadow-lg shadow-brand-primary/30">M</div>
-          <span className="text-brand-text">MOREDEV</span>
+           <img src={LogoImg} alt="Logo" loading="lazy" width={80} height={80} style={{ borderRadius: "5%" }} className=" object-cover group-hover:scale-105 transition-transform duration-500" />
+          <span className="text-brand-text">M O R E D E V</span>
         </Link>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-brand-text/70">
           {links.slice(1).map((l) => (

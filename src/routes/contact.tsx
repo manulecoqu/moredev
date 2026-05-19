@@ -25,8 +25,24 @@ function ContactPage() {
     setTimeout(() => {
       setSending(false);
       toast.success("Message envoyé ! Nous vous répondons sous 24h.");
-      (e.target as HTMLFormElement).reset();
-    }, 700);
+      const form = e.target;
+
+      const nom = form.nom.value;
+      const email = form.email.value;
+      const sujet = form.sujet.value;
+      const message = form.message.value;
+
+      const texte = `Bonjour MOREDEV 
+    Nom: ${nom}
+    Email: ${email}
+    Sujet: ${sujet}
+    Message: ${message}`;
+
+    const url = `https://wa.me/2250767080820?text=${encodeURIComponent(texte)}`;
+
+    window.open(url, "_blank");
+        (e.target as HTMLFormElement).reset();
+      }, 700);
   };
   return (
     <div className="min-h-screen bg-brand-bg text-brand-text">
